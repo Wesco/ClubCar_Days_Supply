@@ -17,7 +17,8 @@ Sub ExportReport()
 
     Sheets("Combined").Copy
     ActiveSheet.Name = "Days Supply"
-
+    ActiveSheet.UsedRange.Columns.AutoFit
+    
     Application.DisplayAlerts = False
     ActiveWorkbook.SaveAs Path & File, xlOpenXMLWorkbook
     ActiveWorkbook.Close

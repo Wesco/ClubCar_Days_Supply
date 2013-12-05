@@ -85,4 +85,8 @@ Sub CreateDSReport()
     
     'Remove monthly quantities
     Columns("C:M").Delete
+    
+    'Fix formatting
+    ActiveSheet.UsedRange.Font.Bold = False
+    Range("A1:C1").Font.Bold = True
 End Sub
