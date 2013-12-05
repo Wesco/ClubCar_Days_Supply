@@ -3,7 +3,14 @@ Option Explicit
 Public Const VersionNumber As String = "1.0.0"
 
 Sub Main()
-
+    ImportGaps
+    ImportMaster
+    ImportForecast
+    CreateDSReport
+    ExportReport
+    Clean
+    
+    MsgBox "Complete!", Title:="Macro"
 End Sub
 
 Sub Clean()
