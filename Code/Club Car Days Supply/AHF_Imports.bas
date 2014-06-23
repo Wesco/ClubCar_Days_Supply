@@ -61,7 +61,7 @@ Sub ImportGaps()
             iRows = ActiveSheet.UsedRange.Rows.Count
             Columns(1).EntireColumn.Insert
             Range("A1").Value = "SIM"
-            Range("A2:A" & iRows).Formula = "=""=""""""&C2&D2&"""""""""
+            Range("A2:A" & iRows).Formula = "=""=""""""&RIGHT(""000000""&C2,6)&RIGHT(""00000""&D2,5)&"""""""""
             Range(Cells(2, 1), Cells(iRows, 1)).Value = Range(Cells(2, 1), Cells(iRows, 1)).Value
         Else
             Err.Raise 18, "ImportGaps", "Import canceled"
