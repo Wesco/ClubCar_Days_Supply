@@ -30,8 +30,8 @@ Sub ImportForecast()
     For i = 0 To 30
         dt = Date - i
         Path = "\\br3615gaps\gaps\Club Car\Forecast\" & Format(Date, "yyyy") & "\"
-        FcstA = "Warehouse A forecast " & Format(dt, "mm-dd-yy")
-        FcstP = "Warehouse P forecast " & Format(dt, "mm-dd-yy")
+        FcstA = "Warehouse A forecast " & Format(dt, "m-dd-yy")
+        FcstP = "Warehouse P forecast " & Format(dt, "m-dd-yy")
 
         If FileExists(Path & FcstA & ".xlsx") And FileExists(Path & FcstP & ".xlsx") Then
             If i > 0 Then
